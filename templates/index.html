@@ -1,37 +1,822 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>MDN Games: Babylon.js demo</title>
-    <!-- Bring in bootstrap stylesheet -->
-    <style>
-        html,body { margin: 0; padding: 0; width: 99%; height: 99%; }
-        canvas  { 
-            margin: 5px; 
-            padding: 1px; 
-            width: 95%; 
-            height: 95%; 
-            border: 2px solid black;
-            border-radius: 1%; 
-            }
-    </style>
-	<link rel="stylesheet" type="text/css" href="static/css/style.css">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BioInformatics - Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="./static/img/favicon.png" rel="icon">
+  <link href="./static/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="./static/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="./static/vendor/aos/aos.css" rel="stylesheet">
+  <link href="./static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./static/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="./static/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="./static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="./static/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="./static/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="./static/css/style.css" rel="stylesheet">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/9.1.0/math.min.js"></script>
 
 </head>
 
 <body>
-    
-	<div class="navbar">
-		<a class="home" href="index">Home</a>
-	</div>
-    <div>
-        <button type="button" onclick="storeMessage()">Click Me!</button>
-        <input type="text" id="inputsmiles" name="inputsmiles">
-        <input type="text" id="outputsmiles" name="outputsmiles">
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex align-items-center justify-content-center justify-content-md-between">
+      <div class="align-items-center d-none d-md-flex">
+        <i class="bi bi-clock"></i> Tuesday, Thursday from 6:30pm - 9:30pm & Saturday from 10am - 2pm
+      </div>
+      <div class="d-flex align-items-center">
+        <i class="bi bi-phone"></i> Hire us now!
+      </div>
     </div>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="./static/appWIP.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <a href="index.html" class="logo me-auto"><img src="./static/img/Logo.png" alt=""> The Ocho </a>
+      
+      
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto " href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
+          <li><a class="nav-link scrollto " href="#model">ML Model</a></li>
+          <li><a class="nav-link scrollto" href="#doctors">Process</a></li>
+          <li><a class="nav-link scrollto" href="#departments">Data Viz</a></li>
+          <li><a class="nav-link scrollto" href="#faq">FAQs</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Intro Section ======= -->
+  <section id="hero">
+    <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+
+      <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+      <div class="carousel-inner" role="listbox">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active" style="background-image: url(./static/img/slide/slide-3.jpg)">
+          <div class="container">
+            <h2>Welcome to <span>The Ocho</span></h2>
+            <p>You caught us! We like to break a mental sweat.</p>
+            <a href="#about" class="btn-get-started scrollto">Read More</a>
+          </div>
+        </div>
+
+
+
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+  </section><!-- End Intro -->
+
+  <main id="main">
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About Us</h2>
+          <p>The Ocho is a team of multidisciplinary Georgia Tech Data Science Bootcamp students. We teamed up to design, create, and produce work that we're proud of for folks that share similar data passions. Our mission is to learn something new each day and to apply the skillz we learn to the work we do.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-right">
+            <img src="./static/img/about.jpg" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h4>The 5 V's of (big) data:</h4>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> Volume</li>
+              <li><i class="bi bi-check-circle"></i> Velocity</li>
+              <li><i class="bi bi-check-circle"></i> Variety</li>
+              <li><i class="bi bi-check-circle"></i> Veracity</li>
+              <li><i class="bi bi-check-circle"></i> Value</li>
+            </ul>
+            <p class="fst-italic">
+              This is us grabbing the bull by the horns... it's a metaphor.
+            </p>
+          </div>
+        </div>
+
+<!-- ======= Counts Section ======= -->
+<section id="counts" class="counts">
+  <div class="container" data-aos="fade-up">
+
+    <div class="row no-gutters">
+
+      <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+        <div class="count-box">
+          <i class="fas fa-hiking fa-spin"></i>
+          <span data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1" class="purecounter"></span>
+
+          <p><strong>Authors</strong>: Andrew, Roderick, Digant, Nick, Matt, Hannah, Asim</p>
+          <a href="#" class="btn-get-started scrollto">Find out more &raquo;</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+        <div class="count-box">
+          <i class="fas fa-tools fa-spin"></i>
+          <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Technology Used</strong>: Python, SQL, Flask App, HTML & CSS, JavaScript, SciKit & Matplotlib, Heroku, and Github</p>
+          <a class="nav-link scrollto" href="#doctors">Find out more &raquo;</a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+        <div class="count-box">
+          <i class="fas fa-database fa-spin"></i>
+          <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Data Sources</strong>: Using bioInformatics data to predict the best inhibitory drug candidates for a particular user selected protein</p>
+          <a href="#faq">Find out more &raquo;</a>
+        </div>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+        <div class="count-box">
+          <i class="fas fa-ruler-combined fa-spin"></i>
+          <span data-purecounter-start="0" data-purecounter-end="3" data-purecounter-duration="1" class="purecounter"></span>
+          <p><strong>Estimators</strong>: Building ML models with scikit-learn and matplotlib to provide the best prediction for drug discovery based on their IC50 (measure of potency)</p>
+          <a href="#model">Find out more &raquo;</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section><!-- End Counts Section -->
+
+            <!-- ======= Author Bio Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h4>Meet The Author's</h4>
+          <p>Check out the scroll below and meet some bad a** bootcampers!</p>
+        </div>
+
+        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Andrew Miller is a sports marketer. Avid volleyballer. Hip-hop junky. Miami sports fan (THE CULTURE). Foodie. 
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="./static/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Andrew Miller</h3>
+                <h4>HTML, CSS, & JavaScript</h4>
+              </div>
+            </div><!-- End bio item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Roderick "G-Force" Gee is a UI & Visualization developer. Soccer dad (The Big Green, Baby!). Jazz fan. Continuous learner.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="./static/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Roderick "G-Force" Gee</h3>
+                <h4>HTML, CSS, & JavaScript</h4>
+              </div>
+            </div><!-- End bio item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Digant Patel is an application development manager. Family man. Tech lover. Hiking enthusiast. Real estate mogul.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="./static/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Digant Patel</h3>
+                <h4>Data Processing & Machine Learning</h4>
+              </div>
+            </div><!-- End bio item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Nick Ayvazian is a biomedical scientist. Grandmaster. Avid trader. Outdoorsy. Comp-sci guy. Amateur chef. 
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="./static/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Nicholas Ayvazian</h3>
+                <h4>Idea Generator, Data Processing, & Machine Learning</h4>
+              </div>
+            </div><!-- End bio item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  PENDING.......
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="./static/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>Matt Kenney</h3>
+                <h4>Heroku & Github</h4>
+              </div>
+            </div><!-- End bio item -->
+
+             <!--- <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Hannah Slay is an astrophysicist and software QA pro. Book worm. Gamer. Wrestling fanatic. Argentine tango dancer. Dungeons and Dragons adventurer.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="./static/img/testimonials/testimonials-6.jpg" class="testimonial-img" alt="">
+                <h3>Hannah Slay</h3>
+                <h4>Structuring Database (SQL)</h4>
+              </div>
+            </div> ---> <!--- End bio item --->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  PENDING.........
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="./static/img/testimonials/testimonials-7.jpg" class="testimonial-img" alt="">
+                <h3>Asim Syed</h3>
+                <h4>Structuring Database (SQL)</h4>
+              </div>
+            </div><!-- End bio item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section><!-- End Author Bio Section -->
+      </div>
+    </section><!-- End About Us Section -->
+
+
+
+       <!-- ======= ML Model Section ======= -->
+       <section id="model" class="model">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <h2>Machine Learning Model</h2>
+            <p>Using scikit-learn and Matplotlib, users can search for and select a protein in the text bar below and the model will generate the best prediction of drug discovery based on their IC50 (measure of potency)</p>
+          </div>
+          <div>
+            <button type="button" onclick="storeMessage()">Run ML for My Smiles :)</button>
+            <input type="text" id="inputsmiles" name="inputsmiles" >
+            <input type="text" id="outputsmiles" name="outputsmiles">
+          </div>
+  
+         <!--- SAVE SOME ROOM FOR THE ML MODEL----
+        --------------------------------------------
+      --------------------------------------------------->
+  
+          </div>
+  
+        </div>
+      </section><!-- End ML Model Section -->
+
+
+
+
+
+    <!-- ======= Process Section ======= -->
+    <section id="doctors" class="doctors section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>The Process</h2>
+          <p>Like Philly and Joel Embid, we trust the process. See the infographic below for a step-by-step visual.</p>
+        </div>
+
+        <!-- ====new infographic section ==== -->
+        <div class="row">
+          <div class="infographic-title">
+            <span class="inner-title"><strong>Step</strong>By<strong> Step</strong></span>
+          </div>
+          <ul class="infographic">
+            <li href="" class="item item1 et_pb_lightbox_image">
+                <img src="" class="img-fluid" alt="">
+                <span class="uppercase">Collect Data</span>
+                
+                <object id="line-svg" type="image/svg+xml" data="./static/img/infog/data-collection.svg" height="60" width="60"></object>
+            </li>
+            
+            <li href="" class="item item2 et_pb_lightbox_image">
+                <img src="">
+                <span class="uppercase">Data Cleaning</span>
+                
+                <object id="line-svg" type="image/svg+xml" data="./static/img/infog/data-cleaning.svg" height="60" width="60"></object>
+            </li>
+
+            <li href="" class="item item7 et_pb_lightbox_image">
+              <img src="">
+              <span class="uppercase">ML Models</span>
+              
+              <object id="line-svg" type="image/svg+xml" data="./static/img/infog/machine-learning.svg" height="60" width="60"></object>
+          </li>
+
+            <li href="" class="item item3 et_pb_lightbox_image">
+                <img src="">
+                <span class="uppercase">Prep database </span>
+                <object id="line-svg" type="image/svg+xml" data="./static/img/infog/postgresql-icon.svg" height="60" width="60"></object>
+                
+            </li>
+
+            <li href="" class="item item4 et_pb_lightbox_image">
+                <img src="">
+                <span class="uppercase">Web app </span>
+                <object id="line-svg" type="image/svg+xml" data="./static/img/infog/flask-icon.svg" height="60" width="60"></object>
+                
+            </li>
+          </ul>
+        </div>
+        <!-- ==== end new infographic section ==== -->
+
+
+    </section><!-- End Process Section -->
+
+
+    
+    
+    <!-- ======= webapp process Section ======= -->
+    <section id="webapp" class="doctors section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h4>The Process Continued - Application</h4>
+          <!--- <p> </p> --->
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="100">
+              <div class="member-img">
+                 
+                <script src="https://3Dmol.org/build/3Dmol-min.js" async></script>     
+                <div style="height: 400px; width: 400px; position: relative;" class='viewer_3Dmoljs' data-pdb='2POR' data-backgroundcolor='0xffffff' data-style='stick'></div> 
+
+              </div>
+              <div class="member-info">
+                <h4>Protein (Interactive)</h4>
+                <p>User selects a protein of interest</p>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="200">
+              <div class="member-img">
+                <br><br><br><br>
+                <img src="https://2.bp.blogspot.com/-sbWGUokhZa4/XBtvRTZ6MWI/AAAAAAAAABo/V7p1txRggTEyWHZNbiQCGa8eN-cWkKoYwCLcBGAs/s400/Screenshot%2B2018-12-20%2Bat%2B10.30.09.png" class="img-fluid" alt="">
+                <img src="" class="img-fluid" alt="">
+                <span class="uppercase">Collect Data</span>                
+                <object id="line-svg" type="image/svg+xml" data="./static/img/chembl_df.svg" height="100%" width="100%"></object>
+              </div>
+              <div class="member-info">
+                <br>
+                <h4>ChEMBL Database</h4>
+                <p>Protein entered to ChEMBl database and all known inhibitory molecules are output with
+                   their chemical formula and inhibitory IC50 Value</p>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="300">
+              <div class="member-img">
+                <object id="line-svg" type="image/svg+xml" data="./static/img/CHEMBL385900.svg" height="100%" width="100%"></object>
+                
+              </div>
+              <div class="member-info">
+                <br><br><br>
+                <h4>Inhibitory Molecules</h4>
+                <p>Each molecules' chemical formula is input into pubchem with the output being a dataframe
+                  with each molecules chemical features (columns).  The chemical features are the predictors (X) 
+                  in the models
+                </p>
+ 
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+            <div class="member" data-aos="fade-up" data-aos-delay="400">
+              <div class="member-info"><p></p></div>
+              <div class="member-img">
+                <img src="" class="img-fluid" alt="">
+                <object id="line-svg" type="image/svg+xml" data="./static/img/ML-model1.svg" height="100%" width="100%"></object>
+              </div>
+              <div class="member-info">
+                <br><br><br><br><br><br>
+                <h4>ML Models</h4>
+                <p>User can input a list of molecules into the model to predict the top candidate inhibitors for their protein of interest. Model creation using lazypredict or an optimized random forest model</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div> 
+    </section><!-- webapp process Section -->
+
+
+    <!-- ======= Analysis Section ======= -->
+    
+    <section id="model" class="model">
+      <div class="container" data-aos="fade-up">  
+
+        <div class="section-title">
+          <h2>Data Analysis</h2>
+          <p>Roll Tide!</p>
+        </div>
+
+        <div class="row" >
+
+          <div class="col-lg-4 col-md-4">
+            <div class="box" data-aos="fade-up" data-aos-delay="100">
+              <h4 class="title"><a href="">Bioactivity!</a></h4>
+
+              <form id="c_form">
+                <div class="form-group">
+                  <label for="chembl-form">Enter the ChEMBL ID</label>
+                  <input class="form-control" id="chembl-form-input" name="chembl-form" type="text" placeholder="CHEMBL6030">
+                </div>
+                <br>
+                <button id="chembl_button" type="button" class="btn btn-primary">Enter</button>
+                
+              </form>
+  
+              <!--<p class="description"></p>-->
+            </div>
+          </div>
+
+          <div class="col-lg-8 col-md-8 mt-4 mt-md-0" >
+            <div class="box featured" data-aos="fade-up" data-aos-delay="400" id="chembl-box">
+              
+            </div>
+          </div>
+
+        </div>
+
+      </div> 
+    </section> 
+    
+    <!--- End Analysis Section -->
+
+    <!-- ======= Data Viz Section ======= -->
+    <section id="departments" class="departments">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Data Viz</h2>
+          <p>CONTENT!!!</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <ul class="nav nav-tabs flex-column">
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+                  <h4>TYPE OF LAZY PREDICT ML MODEL</h4>
+                  <p>EXPLANATION OF DATA/MODEL</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+                  <h4>TYPE OF LAZY PREDICT ML MODEL</h4>
+                  <p>EXPLANATION OF DATA/MODEL</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+                  <h4>TYPE OF LAZY PREDICT ML MODEL</h4>
+                  <p>EXPLANATION OF DATA/MODEL</p>
+                </a>
+              </li>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+                  <h4>TYPE OF LAZY PREDICT ML MODEL</h4>
+                  <p>EXPLANATION OF DATA/MODEL</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-8">
+            <div class="tab-content">
+              <div class="tab-pane active show" id="tab-1">
+                <h3>TYPE OF LAZY PREDICT ML MODEL</h3>
+                <p class="fst-italic">EXPLANATION</p>
+                <img src="./static/img/departments-1.jpg" alt="" class="img-fluid">
+                <p>EXPLAIN</p>
+              </div>
+              <div class="tab-pane" id="tab-2">
+                <h3>TYPE OF LAZY PREDICT ML MODEL</h3>
+                <p class="fst-italic">EXPLAIN</p>
+                <img src="./static/img/departments-2.jpg" alt="" class="img-fluid">
+                <p>EXPLAIN</p>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <h3>TYPE OF LAZY PREDICT ML MODEL</h3>
+                <p class="fst-italic">EXPLAIN</p>
+                <img src="./static/img/departments-3.jpg" alt="" class="img-fluid">
+                <p>EXPLAIN</p>
+              </div>
+              <div class="tab-pane" id="tab-3">
+                <h3>TYPE OF LAZY PREDICT ML MODEL</h3>
+                <p class="fst-italic">EXPLAIN</p>
+                <img src="./static/img/departments-5.jpg" alt="" class="img-fluid">
+                <p>EXPLAIN</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Data Viz Section -->
+
+
+    <!-- ======= Frequently Asked Questioins Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questioins</h2>
+          <p>Everything you need to know so you can navigate The Ocho like a pro.</p>
+        </div>
+
+        <ul class="faq-list">
+
+          <li>
+            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">What is IC50 and what is the significance? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Half-maximal inhibitory concentration (IC50) is the most widely used and informative measure of a drug's efficacy. It indicates how much drug is needed to inhibit a biological process by half, thus providing a measure of potency of an antagonist drug in pharmacological research.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">How is technology helping to advance the Biomedical field? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                One key benefit of technology is that it allows scientists to gain mechanistic insight into human biology and human response to drugs; and it has the potential to be used in many fields, including drug discovery, food and chemical research, as well as precision and regenerative medicine.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">How did your team come up with this project idea? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Nick has a passion for Bioinformatics and more specifically Biomedical data. The team quickly rallied behind the idea, saw an opportunity to learn something new, create something fun, and build cool things. 
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">What is BioInformatics? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+              <p>
+                Bioinformatics is a subdiscipline of biology and computer science concerned with the acquisition, storage, analysis, and dissemination of biological data, most often DNA and amino acid sequences. Bioinformatics uses computer programs for a variety of applications, including determining gene and protein functions, establishing evolutionary relationships, and predicting the three-dimensional shapes of proteins.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Where did you get the BioInformatic data? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
+            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+              <p> We gathered our data primarily from the ChEMBL database. The ChEMBL database brings together chemical, bioactivity, and genomic data to aid the translation of genomic information into effective new drugs. 
+                
+              </p>
+            </div>
+          </li>
+
+
+        </ul>
+
+      </div>
+    </section><!-- End Frequently Asked Questioins Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Contact The Ocho for questions regarding the BioInformatics project.</p>
+        </div>
+
+      </div>
+
+      <div>
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3316.421102659713!2d-84.39847368545274!3d33.77562223970532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88f5048aebc34fe3%3A0xb52ad03e3ad8c50f!2sGeorgia%20Institute%20of%20Technology!5e0!3m2!1sen!2sus!4v1629124393273!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"> </iframe>
+      </div>
+
+      <div class="container">
+
+        <div class="row mt-5">
+
+          <div class="col-lg-6">
+
+            <div class="row">
+              <div class="col-md-12">
+                <div class="info-box">
+                  <i class="bx bx-map"></i>
+                  <h3>Our Address</h3>
+                  <p>North Ave NW, Atlanta, Georgia 30332</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-envelope"></i>
+                  <h3>Email Us</h3>
+                  <p>info@example.com<br>contact@example.com</p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="info-box mt-4">
+                  <i class="bx bx-phone-call"></i>
+                  <h3>Call Us</h3>
+                  <p>719-266-2837<br>505-503-4455</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group mt-3">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message">Error! Still trying to figure out this HTML thing. Thank you for your patience.</div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>The Ocho</h3>
+              <p>
+                North Avenue NW <br>
+                Atlanta, GA 30332, USA<br><br>
+                <strong>Phone:</strong> 719-266-2837<br>
+                <strong>Email:</strong> info@example.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://www.tiktok.com/@maymothedog/video/6912867400564133126?lang=en&is_copy_url=1&is_from_webapp=v1" class="tiktok"><i class="fab fa-tiktok"></i></i></a>
+                <a href="https://twitter.com/itsdougthepug/status/1295868414939082757?s=20" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="https://www.instagram.com/p/CJ9jAwaD8R9/" class="instagram"><i class="bx bxl-instagram"></i></a>
+                </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Data Analysis</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Machine Learning</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">BioInformatics</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Date. I said we should date sometime.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>The Ocho</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        
+        Designed by <a href="https://bit.ly/3y3XrBe">Bold Move Cotton</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="./static/vendor/aos/aos.js"></script>
+  <script src="./static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="./static/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="./static/vendor/php-email-form/validate.js"></script>
+  <script src="./static/vendor/purecounter/purecounter.js"></script>
+  <script src="./static/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <!-- <script src="./assets/js/main.js"></script> -->
+  <script src="./static/main.js"></script>
+
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="./static/main.js"></script>
+  <script src="./static/app.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="./static/appWIP.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 </body>
+
 </html>

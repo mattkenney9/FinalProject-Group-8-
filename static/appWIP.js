@@ -12,7 +12,7 @@ function init() {
       // debugger;
       var smile =importedData[0].Smiles
     //   d3.select("#inputsmiles").property("value") == smile
-      document.getElementById("outputsmiles").value = smile;
+      document.getElementById("inputsimles").value = smile;
      
   
     });
