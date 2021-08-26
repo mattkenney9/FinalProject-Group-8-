@@ -306,9 +306,10 @@
             <p>Using scikit-learn and Matplotlib, users can search for and select a protein in the text bar below and the model will generate the best prediction of drug discovery based on their IC50 (measure of potency)</p>
           </div>
           <div>
+            
+            <input type="text" id="inputsmiles" name="inputsmiles" placeholder="Input Smiles :) Here">
+            <input type="text" id="outputsmiles" name="outputsmiles"placeholder="PIC50 output">
             <button type="button" onclick="storeMessage()">Run ML for My Smiles :)</button>
-            <input type="text" id="inputsmiles" name="inputsmiles" >
-            <input type="text" id="outputsmiles" name="outputsmiles">
           </div>
   
          <!--- SAVE SOME ROOM FOR THE ML MODEL----
@@ -814,7 +815,7 @@
   <script src="./static/main.js"></script>
   <script src="./static/app.js"></script>
   <script src="https://d3js.org/d3.v5.min.js"></script>
-  <script src="./static/appWIP.js"></script>
+  <script src="./static/ML.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 </body>
