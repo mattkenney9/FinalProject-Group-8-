@@ -56,8 +56,9 @@ function init() {
 
   function LoadMLOutput(output){
     debugger;
-    const obj = JSON.parse(output)
-    document.getElementById("outputsmiles").value = obj.Predict[0];
+    var outputvalue = output.Predict[0]
+    // const obj = JSON.parse(output)
+    document.getElementById("outputsmiles").value = outputvalue;
   }
 
   // Initializes the page with a default
